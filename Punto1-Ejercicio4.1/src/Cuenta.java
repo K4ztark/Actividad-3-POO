@@ -11,16 +11,17 @@ public class Cuenta {
     }
 
     public void consignar(float cantidad) {
-        saldo *= cantidad;
+        saldo += cantidad;
         numero_consignaciones++;
     }
 
     public void retirar(float cantidad) {
-        if (cantidad > saldo || cantidad < 0) {
-            System.out.println("No tiene suficiente saldo para retirar");
-        } else {
+        float nuevoSaldo = saldo - cantidad;
+        if (nuevoSaldo >= 0) {
             saldo -= cantidad;
-            numretiros++;
+            numretiros = numretiros + 1;
+        } else {
+            System.out.println("La cantida a retirar excede el saldo actual");
         }
     }
 
@@ -30,16 +31,9 @@ public class Cuenta {
         saldo+=interesmensual;
     }
 
-    public void ExtractoMensual() {
+    public void extractoMensual() {
         saldo-=comisionMensual;
         calcularinteres();
     }
 
-    public void imprimir(){
-        System.out.println("El saldo actual es de $"+saldo);
-        System.out.println("El número de consignaciones realizadas hasta el momento son "+numero_consignaciones);
-        System.out.println("El número de retiros realizados hasta el momento son "+numretiros);
-        System.out.println("La tasa anual es de "+tasaAnual+"%");
-        System.out.println("La comision mensual es de "+comisionMensual);
-    }
 }
