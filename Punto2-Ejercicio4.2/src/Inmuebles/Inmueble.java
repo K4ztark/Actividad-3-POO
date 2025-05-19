@@ -13,7 +13,8 @@ public class Inmueble {
     }
 
     double calcularprecioventa(double valor_area){
-        return valor_area*area;
+        precio_venta = valor_area*area;
+        return precio_venta;
     }
     void imprimir(){
         System.out.println("Identificador inbomiliario= " + identificador_inmobiliario);
