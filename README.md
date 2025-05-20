@@ -1,5 +1,5 @@
-# Actividad #2
-##### Actividad No2 del curso programación orientada a objetos de la Universidad Nacional de Colombia sede medellín.
+# Actividad #3
+##### Actividad No3 del curso programación orientada a objetos de la Universidad Nacional de Colombia sede medellín.
 Hecho por:
 - Juan Esteban Castañeda Hincapié
 
